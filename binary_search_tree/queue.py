@@ -12,33 +12,16 @@ return elements in First In First Out order.
 """
 from singly_linked_list import LinkedList
 
-# class Queue:
-#     def __init__(self):
-#         self.size = 0
-#         self.storage = []
-    
-#     def __len__(self):
-#        return len(self.storage)
-
-#     def enqueue(self, value):
-#         return self.storage.append(value)
-
-#     def dequeue(self):
-#       if len(self.storage) > 0:
-#          return self.storage.pop(0)
-#       else:
-#          return None
-
 class Queue:
     def __init__(self):
-      self.size = 0
-      self.storage = LinkedList()
+        self.size = 0
+        self.storage = LinkedList()
     
     def __len__(self):
-      return self.storage.count_nodes()
+       return self.storage.count_nodes()
 
     def enqueue(self, value):
-      return self.storage.add_to_end(value)
+        return self.storage.add_to_end(value)
 
     def dequeue(self):
-      return self.storage.remove_from_head()
+        return self.storage.remove_from_head()

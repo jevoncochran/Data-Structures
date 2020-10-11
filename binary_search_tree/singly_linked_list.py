@@ -19,7 +19,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def add_to_head(self, value):
+    def add_to_end(self, value):
         new_node = Node(value)
         # if the list is empty
         if not self.head:
@@ -43,4 +43,22 @@ class LinkedList:
             self.head = self.head.get_next()
             # update self.head
             return value
+
+    def count_nodes(self):
+      if not self.head:
+        return 0
+      elif self.head.get_next() == None:
+        return 1
+      else:
+        node_count = 0
+        cur = self.head
+        while cur is not None:
+          cur = cur.next_node
+          node_count +=1
+
+        return node_count
+
+
+
+    
                 
